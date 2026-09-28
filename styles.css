@@ -788,12 +788,14 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 .about-mobile-photo { display: none; }
 @media (max-width: 768px) {
     .hero-mobile-photo {
-        display: block;
-        width: 130px;
-        height: 130px;
-        border-radius: 14px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
         overflow: hidden;
-        margin: 1.2rem auto 0.5rem;
+        margin: 0.75rem 0 0.25rem;
+        float: left;
+        margin-right: 0.85rem;
     }
     .hero-mobile-photo img {
         width: 100%;
@@ -802,13 +804,13 @@ h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
         object-position: center top;
     }
     .about-mobile-photo {
-        display: block;
-        width: 100%;
-        max-width: 320px;
-        height: 220px;
-        border-radius: 14px;
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
         overflow: hidden;
-        margin: 1.25rem auto;
+        margin: 0.75rem 0.85rem 0.5rem 0;
+        float: left;
     }
     .about-mobile-photo img {
         width: 100%;
