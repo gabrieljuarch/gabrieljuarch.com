@@ -321,6 +321,11 @@
     counters.forEach(c => counterObs.observe(c));
     document.querySelectorAll('img').forEach(function(img){img.addEventListener('contextmenu',function(e){e.preventDefault();});});
     document.getElementById('mobileNav').addEventListener('click', function(e) { if (e.target === this) toggleNav(); });
+    if ('ontouchstart' in window) {
+        document.querySelectorAll('.pf-logo-item').forEach(function(item) {
+            item.addEventListener('click', function() { this.classList.toggle('tapped'); });
+        });
+    }
 
     function sendPageContact(e, form) {
         e.preventDefault();
