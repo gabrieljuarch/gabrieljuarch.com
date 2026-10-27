@@ -214,6 +214,7 @@
                 </div>
             </div>
             <iframe src="https://app.dforms.ai/m4r8d4/f/contacto" style="width:100%;min-height:640px;border:none;border-radius:12px;" title="Formulario de contacto" loading="lazy"></iframe>
+            <p style="font-size:0.78rem;color:var(--text-light);margin-top:0.75rem;text-align:center;">Al enviar este formulario aceptas nuestro <a href="aviso-privacidad.html" target="_blank" style="color:var(--primary);text-decoration:underline;">Aviso de Privacidad</a>.</p>
         </div>
     </div>
 </section>
@@ -313,5 +314,30 @@
         form.reset();
     }
 </script>
+
+<!-- COOKIE BANNER -->
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#0f2356;color:#fff;padding:1.1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;box-shadow:0 -4px 24px rgba(0,0,0,0.18);">
+    <p style="margin:0;font-size:0.88rem;line-height:1.6;flex:1;min-width:200px;">
+        Usamos cookies propias y de terceros (incluyendo Meta Pixel) para mejorar tu experiencia y mostrarte publicidad relevante. Puedes aceptarlas o rechazar las no esenciales.
+        <a href="aviso-privacidad.html#cookies" style="color:#f97316;text-decoration:underline;margin-left:0.3rem;">Más información</a>
+    </p>
+    <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+        <button onclick="setCookies('reject')" style="background:transparent;border:1.5px solid rgba(255,255,255,0.4);color:#fff;padding:0.55rem 1.1rem;border-radius:8px;cursor:pointer;font-size:0.85rem;font-family:'Inter',sans-serif;">Solo esenciales</button>
+        <button onclick="setCookies('accept')" style="background:#f97316;border:none;color:#fff;padding:0.55rem 1.25rem;border-radius:8px;cursor:pointer;font-size:0.85rem;font-weight:700;font-family:'Inter',sans-serif;">Aceptar todas</button>
+    </div>
+</div>
+<script>
+(function(){
+    var consent = localStorage.getItem('gjc_cookies');
+    if (!consent) {
+        document.getElementById('cookieBanner').style.display = 'flex';
+    }
+})();
+function setCookies(choice) {
+    try { localStorage.setItem('gjc_cookies', choice); } catch(e){}
+    document.getElementById('cookieBanner').style.display = 'none';
+}
+</script>
+
 </body>
 </html>
