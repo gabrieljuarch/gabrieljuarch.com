@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | Gabriel Juárez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+        }
+        .error-code {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(6rem, 20vw, 10rem);
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+        .error-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .error-text {
+            font-family: 'Inter', sans-serif;
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            max-width: 420px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .error-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.85rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .error-btn:hover { opacity: 0.85; }
+    </style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">
+        <img src="gabrieljuarch 2025.png" alt="Gabriel Juárez" class="logo-icon">
+        <img src="texto gabrieljuarch.png" alt="gabrieljuarch" class="logo-text">
+    </a>
+    <ul class="nav-links">
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="testimonios.html">Testimonios</a></li>
+        <li><a href="recursos.html" class="nav-cta">Recurso gratis</a></li>
+    </ul>
+    <button class="hamburger" id="ham" aria-label="Menú" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="toggleNav()">✕</button>
+    <a href="index.html" onclick="toggleNav()">Inicio</a>
+    <a href="sobre-mi.html" onclick="toggleNav()">Sobre mí</a>
+    <a href="servicios.html" onclick="toggleNav()">Servicios</a>
+    <a href="portafolio.html" onclick="toggleNav()">Portafolio</a>
+    <a href="testimonios.html" onclick="toggleNav()">Testimonios</a>
+    <a href="recursos.html" onclick="toggleNav()">Recurso gratis</a>
+</div>
+
+<div class="error-section">
+    <div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Esta página no existe</h1>
+        <p class="error-text">Parece que el link que seguiste ya no está disponible o fue movido. No te preocupes, desde aquí puedes volver al inicio.</p>
+        <a href="index.html" class="error-btn">Volver al inicio</a>
+    </div>
+</div>
+
+<script>
+function toggleNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+    document.getElementById('ham').classList.toggle('active');
+}
+document.getElementById('mobileNav').addEventListener('click', function(e) { if (e.target === this) toggleNav(); });
+</script>
+</body>
+</html>
