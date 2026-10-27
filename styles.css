@@ -1658,7 +1658,9 @@ footer { background: var(--dark); padding: 4rem 2rem 2rem; }
     .btn { width: 100%; justify-content: center; }
     .hero h1 { font-size: 2rem; }
     .explore-grid { grid-template-columns: 1fr; }
-    .page-header { min-height: 260px; }
+    .page-header { min-height: 260px; overflow: hidden; padding-left: 1.25rem; padding-right: 1.25rem; }
+    .page-header-inner { max-width: 100%; overflow: hidden; }
+    .page-header p { white-space: normal !important; word-break: break-word; overflow-wrap: break-word; max-width: 100%; }
     .trust-strip-inner { grid-template-columns: 1fr 1fr; }
     .speaking-stats-inner { grid-template-columns: 1fr 1fr; }
 }
